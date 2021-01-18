@@ -1,0 +1,30 @@
+UML - Linguagem de Modelagem Unificada. Está presente na fase de planejamento do sistema,
+de projetos OO (Orientado à Objetos).
+
+Existem dois tipos de diagramas, Diagramas Estruturais (estáticos) e Diagramas Dinâmicos
+
+Diagramas Estáticos que usaremos:
+-Diagrama de Classes,
+-Diagrama de Caso de Uso
+
+Diagrama de caso de uso: Documenta o que o sistema faz do ponto de vista do usuário.
+Descreve as principais funcionalidades do sistema a e interação dessas funcionalidades
+com os usuários do sistema. Este não se aprofunda em detalhes técnicos que dizem
+COMO o sistema faz.
+
+Elementos:
+-Sistema (Site, software, aplicativos, etc),
+-Atores primários (inicia a utilização do sistema) e secundários (reagem à alguma ação
+desenvolvida por um ator primário),
+-Casos de uso (descreve o que o sistema realiza, função principal),
+-Relacionamentos (setas indicadoras que mostram a interação dos atores com o sistema)
+
+Diagrama de Classes: Define a estrutura das classes do sistema e estabelece
+como as classes se relacionam. Apenas as classes principais.
+
+Elementos:
+-Classe (nome da classe),
+-Atributos (propriedades da classe),
+-Métodos (Métodos da classe)
+
+

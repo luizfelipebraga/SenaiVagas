@@ -1,0 +1,30 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+
+.description{
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+.description h4{
+    font-size: 17px;
+}
+
+/* .input-email{
+    display:flex;
+    justify-content:center;
+    width:85%;
+    margin-right: 15px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+} */
+
+.box-email{
+    width:85%;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}

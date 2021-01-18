@@ -1,0 +1,16 @@
+.buscarDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-select{
+    margin: 0 auto;
+}
+
+.pagina-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 30vh;
+}

@@ -1,0 +1,113 @@
+.flex-column {
+  width: 18em;
+  height: 100%;
+  min-height: 100vh;
+}
+
+#logo {
+  position: fixed;
+  left: 1em;
+  width: 12.5em;
+}
+
+.flex-column .navs {
+  align-items: flex-start;
+  position: fixed;
+  max-width: 16em;
+  top: 10em;
+  left: .5em;
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+
+.btn-container {
+  margin: 40vh 4em;
+}
+
+#btn-logout {
+  background-color: #df0003;
+}
+
+#btn-logout:hover {
+  background-color: #a00003;
+}
+
+@media (max-width: 1600px) {
+  .flex-column {
+    width: 14em;
+    height: 100%;
+    min-height: 100vh;
+  }
+  
+  #logo {
+    position: fixed;
+    left: 0.8em;
+    width: 9em;
+  }
+  
+  .flex-column .navs {
+    position: fixed;
+    align-items: flex-start;
+    max-width: 14em;
+    top: 9em;
+    left: .4em;
+    text-decoration: underline;
+    font-size: 1em;
+  }
+  
+  .btn-container {
+    margin: 40vh 2.9em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .flex-column {
+    width: 13em;
+    height: 100%;
+    min-height: 100vh;
+  }
+  
+  #logo {
+    position: fixed;
+    left: 0.6em;
+    width: 8em;
+  }
+  
+  .flex-column .navs {
+    position: fixed;
+    align-items: flex-start;
+    max-width: 13em;
+    top: 9em;
+    left: .4em;
+    text-decoration: underline;
+    font-size: 1em;
+  }
+  
+  .btn-container {
+    margin: 35vh 2.5em;
+  }
+}  
+
+@media (max-width: 992px) {
+  .flex-column {
+    height: unset;
+    width: 100%;
+    max-width: 100%;
+    min-height: 10vh;
+  }
+  .flex-column .navs {
+    position: unset;
+    margin-top: 2em;
+  }
+  #logo {
+    position: unset;
+    width: 12.5em;
+  }
+  .btn-container {
+    margin: 2em auto;
+  }
+  #btn-logout {
+    width: 10em;
+    font-size: 1em;
+  }
+}

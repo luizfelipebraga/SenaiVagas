@@ -1,0 +1,52 @@
+.table {
+    align-items: center;
+    justify-content: center;
+}
+
+.barraSuperior{
+    margin-left: 2%;
+    max-width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #373737;
+    color: #f2f2f2;
+    padding: 1.5em 0;
+}
+
+table {
+    margin-left: 2%;
+    max-width: 96%;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+tr {
+    text-align: center;
+    align-items: center;
+}
+
+#linhaBotoes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width:1060px) {
+    table {
+        margin-left: .5%;
+        max-width: 99%;
+        align-items: center;
+    }
+    .barraSuperior {
+        margin-left: .5%;
+        max-width: 99%;
+    }
+    #btnRemover {
+        min-width: 165px;
+        margin-left: 1%;
+    }
+    #btnPerfil {
+        min-width: 90px;
+        margin-right: 1%;
+    }
+}

@@ -1,0 +1,233 @@
+.footer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 13em;
+    width: 100%;
+    overflow: hidden;
+
+    background-color:#DF0003 ;
+    box-sizing: border-box;
+
+    
+    bottom:0;
+    left:0;
+    
+    padding-left: 7.1em;
+}
+
+.verticalLine{
+    width: 150px;
+    height: 0px;
+    left: 720px;
+    top: 805px;
+    
+    border: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+}
+
+.inner-footer .logo-container img {
+    width: 200px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-third p {
+    color: white;
+    font-family: sans-serif;
+    justify-content: space-between;
+    font-size: 1.1em;
+    margin: 5px;
+}
+
+@media(max-width: 1600px) {
+    .footer{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+        height: 11em;
+        width: 100%;
+        overflow: hidden;
+    
+        background-color:#DF0003 ;
+        box-sizing: border-box;
+    
+        
+        bottom:0;
+        left:0;
+        
+        padding-left: 7em;
+    }
+
+    .verticalLine{
+        width: 150px;
+        height: 0px;
+        left: 720px;
+        top: 805px;
+        
+        border: 1px solid #FFFFFF;
+        transform: rotate(90deg);
+    }
+
+    .inner-footer .logo-container img {
+        width: 185px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-third p {
+        color: white;
+        font-family: sans-serif;
+        justify-content: space-between;
+        font-size: 0.9em;
+        margin: 5px;
+    }
+}
+
+@media(max-width: 1400px) {
+    .footer{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+        height: 9em;
+        width: 100%;
+        overflow: hidden;
+    
+        background-color:#DF0003 ;
+        box-sizing: border-box;
+    
+        
+        bottom:0;
+        left:0;
+        
+        padding-left: 3.6em;
+    }
+
+    .verticalLine{
+        width: 120px;
+        height: 0px;
+        left: 720px;
+        top: 805px;
+        
+        border: 1px solid #FFFFFF;
+        transform: rotate(90deg);
+    }
+
+    .inner-footer .logo-container img {
+        width: 165px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-third p {
+        color: white;
+        font-family: sans-serif;
+        justify-content: space-between;
+        font-size: 0.75em;
+        margin: 5px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .footer{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+        height: 8.5em;
+        width: 100%;
+        overflow: hidden;
+    
+        background-color:#DF0003 ;
+        box-sizing: border-box;
+    
+        
+        bottom:0;
+        left:0;
+        
+        padding-left: 3em;
+    }
+
+    .verticalLine{
+        width: 120px;
+        height: 0px;
+        left: 720px;
+        top: 805px;
+        
+        border: 1px solid #FFFFFF;
+        transform: rotate(90deg);
+    }
+
+    .inner-footer .logo-container img {
+        width: 160px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-third p {
+        color: white;
+        font-family: sans-serif;
+        justify-content: space-between;
+        font-size: 0.7em;
+        margin: 5px;
+    }
+}
+
+@media(max-width: 550px) {
+    .footer{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+        height: 7.5em;
+        width: 100%;
+        overflow: hidden;
+    
+        background-color:#DF0003 ;
+        box-sizing: border-box;
+    
+        
+        bottom:0;
+        left:0;
+        
+        padding-left: 3em;
+    }
+
+    .verticalLine{
+        width: 100px;
+        height: 0px;
+        left: 720px;
+        top: 805px;
+        
+        border: 1px solid #FFFFFF;
+        transform: rotate(90deg);
+    }
+
+    .inner-footer .logo-container img {
+        width: 110px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-third p {
+        color: white;
+        font-family: sans-serif;
+        justify-content: space-between;
+        font-size: 0.5em;
+        margin: 5px;
+    }
+}

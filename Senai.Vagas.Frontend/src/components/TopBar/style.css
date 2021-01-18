@@ -1,0 +1,45 @@
+.bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2em 0;
+    background-color: #df0002;
+    color: #ffffff;
+    width: 100%;
+}
+
+.bar-items {
+    margin: 0 1em;
+    cursor: pointer;
+}
+
+.bar-items:hover {
+    opacity: 0.8;
+}
+
+.item-notification {
+    cursor: pointer;
+    border-bottom: 1px #df0002;
+}
+
+.item-notification:hover{
+    opacity: 0.5;
+}
+
+@media (max-width: 1600px) {
+    .bar{
+        padding: 1.7em 0;
+    }
+  }
+
+@media (max-width: 1400px) {
+    .bar{
+        padding: 1.5em 0;
+    }
+  }
+
+@media (max-width: 992px) {
+    .bar{
+        display: none;
+    }
+  }

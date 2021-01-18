@@ -1,0 +1,137 @@
+.fundo {
+  background-image: url(../../assets/images/FotoSalaDesfocada.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.vermelho {
+  background-color: rgba(255, 0, 0, 0.25);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+}
+
+#btn-candidato-fechar{
+  background-color: #016799;
+}
+
+#btn-candidato-enviar{
+  background-color: #df0002;
+}
+
+#btn-cadastrar {
+  background-color: #df0002;
+  display: flex;
+  justify-content: center;
+}
+
+#btn-login {
+  background-color: #df0002;
+  display: flex;
+  justify-content: center;
+}
+
+.caixa {
+  width: 40%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.836);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+}
+
+.content {
+  width: 70%;
+}
+
+.titulo{
+  margin-bottom: 2em;
+}
+
+#title-login {
+  margin: 0 auto;
+}
+
+#title-cadastro {
+  margin: 0 auto;
+}
+
+.caixa img {
+  width: 15em;
+}
+
+.links-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.links-login p {
+  text-decoration: underline;
+  color: #016799;
+}
+
+.links-login p:hover {
+  color: #0091da;
+  cursor: pointer;
+}
+.button {
+  height: 25px;
+  width: 290px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 1%;
+  border: none;
+  background-color: red;
+  
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1280px) {
+  .caixa {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .caixa img {
+    width: 27vh;
+    align-self: center;
+  }
+
+ 
+}
+
+@media (max-width: 776px) {
+  .caixa {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0%;
+  }
+
+  .fundo{
+    background-image: none;
+  }
+  .vermelho {
+    background-color: none;
+  }
+}

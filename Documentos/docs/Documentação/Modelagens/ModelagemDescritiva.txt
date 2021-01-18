@@ -1,0 +1,263 @@
+37 Entidades no total
+
+Usuario:
+	-Id - long
+	-Nome - string
+	-Email - string
+	-Senha - string
+	-TipoUsuarioId - long
+
+TipoUsuario:
+	-Id - long
+	-Descrição - string
+
+StatusUsuario: ("Conta Ativa", "Conta Desativada")
+	-Id - long
+	-Descricao - string
+
+HistoricoStatusUsuario:
+	-Id - long
+	-Atual - bool
+	-StatusUsuarioId - long
+	-UsuarioId - long
+
+TipoCurso: ("DEV-Desenvolvimento de Sistemas,"Redes de Computadores", "Multimídia") 
+	-Id - long
+	-Descrição - string
+
+TermoOuEgressoAluno: ("1° Termo","2° Termo", "3° Termo", "4° Termo" e "Egresso")
+	-Id - long
+	-Descricao - string
+
+Aluno:
+	-Id - long
+	-NomeCompleto - string
+	-Email - string
+	-RMA - string
+	-Sexo - bool
+	-DataNascimento - DateTime
+	-DataMatricula - DateTime
+	-TermoOuEgressoAlunoId - long
+	-TipoCursoId - long
+	-EnderecoId - long	
+
+Empresa:
+	-Id - long
+	-CNPJ - string
+	-Nome - string
+	-EnderecoId - long
+	-TipoEmpresaId - long
+
+UsuarioCandidatoAluno:
+	-Id - long
+	-AlunoId - long
+	-UsuarioId - long
+
+UsuarioEmpresa:
+	-Id - long
+	-EmpresaId - long
+	-UsuarioId - long
+
+-UsuarioAdministrador:
+	-Id - long
+	-NIF - string
+	-UsuarioId - long
+
+-PerfilUsuarioCandidatoAluno: 1:1 (candidato)| obs. Por enquanto, apenas UM link
+	-Id - long
+	-LinkExterno - string
+	-SobreOCandidato - string
+	-Atual - bool
+	-UsuarioCandidatoAlunoId - long
+
+-PerfilAreaUsuarioCandidatoAluno: n:n
+	-Id - long
+	-Ativo - bool
+	-AreaId - long
+	-UsuarioCandidatoAlunoId - long
+
+TipoEmpresa: ("FILIAL" e "MATRIZ")
+	-Id - long
+	-Descricao - string
+
+QSA: (Quadro de Sócios e Administradores) n:1 empresa
+	-Id - long
+	-Nome - string
+	-Qualificacao - string
+	-EmpresaId - long
+
+TipoCnae: (Cria um novo quando vem pelo CNPJ)
+	-Id - long
+	-Descricao - string
+	-Codigo - string
+
+AtividadeCnae:
+	-Id - long
+	-TipoCnaeId - long
+	-TipoAtividadeCnaeId - long
+	-EmpresaId - long
+
+TipoAtividadeCnae: ("atividade principal" e "secundária")
+	-Id - long
+	-Descricao - string
+
+Endereco:
+	-Id - long
+	-CEP - string
+	-Bairro - string
+	-Logradouro - string //Também é usado como RUA
+	-Numero - string
+	-MunicipioId - long (caso não encontre nome de municipio no BD, cria um com o que vem no CNPJ em casos de cadastro de EMPRESA)		
+
+Municipio:
+	-Id - long
+	-Descricao - string
+	-UfSiglaId - long	
+
+UfSigla:
+	-Id - long
+	-UfEstado - string
+	-UfSigla - string
+
+Area:
+	-Id - long
+	-Descricao - string
+
+Vaga:
+	-Id - long
+	-NomeVaga - string
+	-Cargo - string
+	-DescricaoVaga - string
+	-DataEncerramento - DateTime
+	-StatusVagaId - long
+	-TipoExperienciaId - long
+	-FaixaSalarialId - long
+	-UsuarioEmpresaId - long
+	-MunicipioId - long
+
+StatusVaga: ("Vaga Ativa", "Vaga Encerrada", "Vaga Excluída")
+	-Id - long
+	-Descricao - string
+
+TipoExperiencia: ("Junior","Senior", "Pleno", "Não requerido")
+	-Id - long
+	-Descricao - string
+
+FaixaSalarial: ("Menos de R$ 1000", "Entre R$ 1000 e R$ 2000", etc)
+	-Id - long
+	-Descricao - string
+
+AreaVagaRecomendado: n:n (qnd usuario alterar: altera todos os cursos atuais para false, e adc os novos ou referencia os já existentes se já existirem no BD)
+	-Id - long
+	-Ativo - bool
+	-AreaId - long
+	-VagaId - long
+
+Inscricao:
+	-Id - long
+	-Ativo - bool
+	-RecebeuConvite - bool
+	-UsuarioCandidatoAlunoId - long
+	-VagaId - long
+
+ConviteEntrevista:
+	-Id - long
+	-DataHoraEntrevista - Datetime
+	-InfosComplementares - string
+	-EnderecoId - long (Usará: rua, bairro, e municipioId)
+	-UsuarioCandidatoAlunoId - long
+	-VagaId - long
+
+
+---------------------------------------------------------------------------------------
+--------------------------Para validação de usuários-----------------------------------
+
+Funcionalidades aplicáveis (validação de usuário Candidato)
+ValidacaoUsuarioCandidato: 
+	-Id - long
+	-Token - string
+	-DataValida - DateTime
+	-Ativo - bool
+	-AlunoId - long
+OBS. (A senha deverá vir num ViewModel (pelo controller) criado especialmente para isso (props: Token e Senha))
+
+Funcionalidades aplicáveis (Esqueci minha senha, alterar senha/email)
+AlterarCredenciais:
+	-Id - long
+	-Token - long
+	-DataValida - DateTime
+	-Ativo - bool
+	-NovoEmail - string
+OBS. Em casos de senha, deverá vir num ViewModel identico explicado anteriormente
+OBS2. Caso for Email, campo NÃO será vazio ou nulo, caso for senha, campo "NovoEmail" será vázio ou nulo 
+
+
+---------------------------------------------------------------------------------------
+--------------------------------Gerenciamento de Estágios------------------------------
+Ideias para Administração Porssale
+
+Estagio:
+	-Id - long
+	-DataInicio - DateTime
+	-DataTerminoPrevisto - DateTime
+	-DataTerminoEfetivo - DateTime
+	-DiasContrato - int
+	-Contrato - bool
+	-PlanoEstagio - bool
+	-Desligamento - bool
+	-RequerimentoMatriculaId - long
+	-TermoOuEgressoAlunoEstagio - long
+	-PessoaResponsavelId - long
+	-EnderecoId - long
+	-AlunoId - long
+	-UsuarioEmpresaId - long
+
+PessoaResponsavel:
+	-Id - long
+	-Nome - string
+
+ContatoEstagio: n:1 (estagio)
+	-Id - long
+	-TelefoneOuEmail - string
+	-EstagioId - long
+
+StatusEstagio: ("Concluído", "Em Andamento", "Evadido")
+	-Id - long
+	-Descricao - string
+
+HistoricoStatusEstagio:
+	-Id - long
+	-Explicacao - string
+	-Atual - bool
+	-StatusEstagioId - long
+	-EstagioId - long
+
+RequerimentoMatricula: ("Sim", "Não", "Assinatura")
+	-Id - long
+	-Descricao - string
+
+
+
+---------------------------------------------------------------------------------------
+---------------------------------NÃO IRÁ SER IMPLEMENTADO------------------------------
+
+AvaliacaoAlunoEstagio:
+	-Id - long
+	-Descricao - string
+	-NumeroAvaliacao - int
+	-Realizada - bool
+	-DataAvaliacao - DateTime
+	-EstagioId - long
+
+AnotacaoAlunoEstagio:
+	-Id - long
+	-Descricao - string
+	-EstagioId - long
+
+-ChatEmpresaCandidato: 
+	-Id - long
+	-Mensagem - string
+	-DataHoraMensagem - DateTime
+	-UsuarioRemetenteId - long
+	-UsuarioDestinatarioId - long
+

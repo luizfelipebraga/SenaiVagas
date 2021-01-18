@@ -1,0 +1,18 @@
+Passo a passo para subir servidor do FRONT no heroku (após criação da conta e app
+no mesmo).
+
+-> Instalar CLI do Heroku
+
+Digitar na linha de comando:
+
+// Autenticação com heroku
+-> heroku login
+
+// Configura o endereço do APP (remote)
+-> heroku git:remote -a senai-vagas
+
+// Sobe app no heroku
+-> git push heroku master
+
+Após isso, a aplicação já estará atualizada no heroku, com o endereço:
+senai-vagas.herokuapp.com

@@ -1,0 +1,95 @@
+.perfil-container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 75%;
+  margin: 0 auto;
+  max-width: 100vh;
+  -webkit-box-shadow: 0px 1px 10px #a4a4a4;
+  -moz-box-shadow: 0px 1px 10px #a4a4a4;
+  box-shadow: 0px 1px 10px #a4a4a4;
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+.cnae {
+  margin: 1em 0;
+}
+
+.cnae-list {
+  margin: 1em 0;
+}
+
+.links {
+  position: relative;
+}
+
+.links p {
+  text-decoration: underline;
+  color: #016799;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0.6em;
+  left: 75%;
+}
+
+.links p:hover {
+  color: #0091da;
+  cursor: pointer;
+}
+
+.infos-perfil {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.form-box {
+  width: 90%;
+  margin: 2em auto;
+}
+
+.table {
+  align-items: center;
+  justify-content: center;
+}
+
+.barraSuperior {
+  margin-left: 2%;
+  max-width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #373737;
+  color: #f2f2f2;
+  padding: 1.5em 0;
+}
+
+tr {
+  text-align: center;
+  align-items: center;
+}
+
+ul li {
+  margin-left: 15%;
+  color: #606060;
+}
+
+@media (max-width: 1060px) {
+  table {
+    margin-left: 0.5%;
+    max-width: 99%;
+    align-items: center;
+  }
+  .barraSuperior {
+    margin-left: 0.5%;
+    max-width: 99%;
+  }
+}
+
+@media (max-width: 992px) {
+  .perfil-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,46 @@
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 8em;
+}
+
+.title-container > img {
+    margin: 0 auto;
+    display: flex;
+}
+
+.title-container {
+    margin: 2em;
+}
+
+@media (max-width: 1600px){
+    .title-container h2 {
+        font-size: 1.5em;
+    }
+    
+    img {
+        width: 6em;
+    }
+}
+
+@media (max-width: 1200px){
+    .title-container h2 {
+        font-size: 1.4em;
+    }
+    
+    img {
+        width: 5em;
+    }
+}
+
+@media (max-width: 992px){
+    .title-container h2 {
+        font-size: 1.3em;
+    }
+    
+    img {
+        width: 4.7em;
+    }
+}

@@ -1,0 +1,1142 @@
+{
+	"info": {
+		"_postman_id": "e1006d08-8e1b-4e08-bdaa-b39510327f63",
+		"name": "SenaiVagas.Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Import's Excel",
+			"item": [
+				{
+					"name": "Enderecos",
+					"item": [
+						{
+							"name": "ImportarUfs(1°)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Arq",
+											"type": "file",
+											"src": "/C:/Users/DIOGO-PC/Desktop/TCC-Senai-Docs/Documentos/utilidades-gerais/Estados/UFEstadosBRCompleto.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Enderecos/import-excel/Ufs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Enderecos",
+										"import-excel",
+										"Ufs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ImportarMunicipios(2°)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Arq",
+											"type": "file",
+											"src": "/C:/Users/DIOGO-PC/Desktop/TCC-Senai-Docs/Documentos/utilidades-gerais/Municipios/MunicipiosSP.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Enderecos/import-excel/Municipios",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Enderecos",
+										"import-excel",
+										"Municipios"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Cursos e Alunos",
+					"item": [
+						{
+							"name": "ImportarCursosPeloExcelAlunos (1°)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Arq",
+											"type": "file",
+											"src": "/C:/Users/DIOGO-PC/Desktop/TCC-Senai-Docs/Documentos/utilidades-gerais/Lista de Alunos do SENAI - Santa Cecília/alunos.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Alunos/import-excel/cursos",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Alunos",
+										"import-excel",
+										"cursos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ImportarAlunos (2°)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Arq",
+											"type": "file",
+											"src": "/C:/Users/DIOGO-PC/Desktop/TCC-Senai-Docs/Documentos/utilidades-gerais/Lista de Alunos do SENAI - Santa Cecília/alunos.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Alunos/import-excel/alunos",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Alunos",
+										"import-excel",
+										"alunos"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Vagas",
+			"item": [
+				{
+					"name": "PutEncerrarVaga",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Vagas/encerrar/vaga/1/usuario/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"encerrar",
+								"vaga",
+								"1",
+								"usuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerTodasInscricoesDeVagaEspecifica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Inscricoes/vaga/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Inscricoes",
+								"vaga",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdmExcluirUmaVaga",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGVtYWlsLmNvbSIsImp0aSI6IjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjAwMzg2MjAxLCJpc3MiOiJTZW5haS5WYWdhcy5CYWNrZW5kIiwiYXVkIjoiU2VuYWkuVmFnYXMuQmFja2VuZCJ9.tFaogdVd8hmAzcch6Qu_ktSPe3FvQ3-TXf_dgBSoYPc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Administrador/excluir/vaga/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Administrador",
+								"excluir",
+								"vaga",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarVagaPorFiltro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Vagas/buscar/filtro/desenvolvedor frontend queluz/usuario/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"buscar",
+								"filtro",
+								"desenvolvedor frontend queluz",
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarVagaPorConfigInteresseCandidato",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Vagas/buscar/area-candidato/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"buscar",
+								"area-candidato",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminBuscasTodasVagas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Vagas/buscar-todas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"buscar-todas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarVaga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioId\": 6,\r\n    \"nomeVaga\": \"Desenvolvedor Web (FrontEnd)\",\r\n    \"cargo\": \"Estágiario\",\r\n    \"descricaoVaga\": \"bla bla bla bla bla bla bla bla bla bla bla bla bla bla ble ble ble ble ble ble ble ble bli bli bli bli bli bli bli bli bli blo blo blo blo blo blo blo blo blo blo blu blu blu blu blu blu blu blu\",\r\n    \"dataEncerramento\": \"2020-09-27\",\r\n    \"municipio\": {\r\n        \"id\": 376,\r\n        \"descricao\": \"Diadema\",\r\n        \"ufSigla\":{\r\n            \"id\": 7,\r\n            \"ufEstado\": \"São Paulo\",\r\n            \"ufSigla\": \"SP\"\r\n        }\r\n    },\r\n    \"tipoExperiencia\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"Junior\"\r\n    },\r\n    \"faixaSalarial\": {\r\n        \"id\": 3,\r\n        \"descricao\": \"Entre R$ 2000,00 e R$ 3000,00\"\r\n    },\r\n    \"areasRecomendadas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"descricao\": \"Web Design\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"descricao\": \"Desenvolvedor Frontend\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Vagas/cadastrar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EmpresaEditarVaga",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioId\": 6,\r\n    \"nomeVaga\": \"Desenvolvedor Web (FrontEnd)\",\r\n    \"cargo\": \"Estágiario\",\r\n    \"descricaoVaga\": \"bla bla bla bla bla bla bla bla bla bla bla bla bla bla ble ble ble ble ble ble ble ble bli bli bli bli bli bli bli bli bli blo blo blo blo blo blo blo blo blo blo blu blu blu blu blu blu blu blu\",\r\n    \"dataEncerramento\": \"2020-09-27\",\r\n    \"municipio\": {\r\n        \"id\": 376,\r\n        \"descricao\": \"Diadema\",\r\n        \"ufSigla\":{\r\n            \"id\": 7,\r\n            \"ufEstado\": \"São Paulo\",\r\n            \"ufSigla\": \"SP\"\r\n        }\r\n    },\r\n    \"tipoExperiencia\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"Junior\"\r\n    },\r\n    \"faixaSalarial\": {\r\n        \"id\": 3,\r\n        \"descricao\": \"Entre R$ 2000,00 e R$ 3000,00\"\r\n    },\r\n    \"areasRecomendadas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"descricao\": \"Web Design\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"descricao\": \"Multimídia\"\r\n        },\r\n        {\r\n            \"id\": 7,\r\n            \"descricao\": \"Design Gráfico\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Vagas/alterar/vaga/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"alterar",
+								"vaga",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarVagasEmpresaEspecifica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Vagas/vagas-empresa/buscar/usuario/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"vagas-empresa",
+								"buscar",
+								"usuario",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodasInformacoesVagaEspecifica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Vagas/buscar/vaga/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"buscar",
+								"vaga",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReativarVagaEncerrada",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UsuarioId\" : \"2\",\r\n    \"DataEncerramento\" : \"2020-12-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Vagas/reativar/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Vagas",
+								"reativar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "LoginAdministrador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@email.com\",\r\n    \"senha\": \"admin12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginNormal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"feliperuivo10@hotmail.com\",\r\n    \"senha\" : \"luiz12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Candidatos",
+					"item": [
+						{
+							"name": "CadastrarUsuarioCandidato (Após validação)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"senha\": \"diogo123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/Usuarios/cadastro/usuario-candidato/token/erQBOeBohKPY2uSxC9ZjWMePdvgmWZp7BDM4vht61XTExDwqiWxebbfR6edv",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Usuarios",
+										"cadastro",
+										"usuario-candidato",
+										"token",
+										"erQBOeBohKPY2uSxC9ZjWMePdvgmWZp7BDM4vht61XTExDwqiWxebbfR6edv"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ValidacaoUsuarioCandidato (Buscar aluno por Email ou RMA)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rmaouEmail\" : \"diogo.luo@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/Usuarios/validacao/candidato",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Usuarios",
+										"validacao",
+										"candidato"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BuscarUsuarioCandidatoById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/UsuariosCandidatos/perfil/usuario/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"UsuariosCandidatos",
+										"perfil",
+										"usuario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BuscarAlunoPorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/UsuariosCandidatos/perfil/aluno/4737",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"UsuariosCandidatos",
+										"perfil",
+										"aluno",
+										"4737"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BuscarTodosOsAlunosECandidatos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/UsuariosCandidatos/buscar-todos",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"UsuariosCandidatos",
+										"buscar-todos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAreasInteresseCandidato",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/UsuariosCandidatos/area-interesse/usuario/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"UsuariosCandidatos",
+										"area-interesse",
+										"usuario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConfigAreasInteresseCandidato",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"AreasInteresse\": [\r\n        {\r\n            \"id\": 1,\r\n            \"descricao\": \"Web Design\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"descricao\": \"Desenvolvedor Frontend\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/UsuariosCandidatos/usuario/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"UsuariosCandidatos",
+										"usuario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AlterarDescricaoLinkExternoPerfilUsuarioCandidato",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"linkExterno\": \"https://github.com/devjoaosantos\",\r\n        \"sobreOCandidato\": \"Meu nome é joao e eu tenho 17 anos :)\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/UsuariosCandidatos/alterar/descricao/link/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"UsuariosCandidatos",
+										"alterar",
+										"descricao",
+										"link",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllVagaInscricoesByUsuarioId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Inscricoes/usuario/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Inscricoes",
+										"usuario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Empresas",
+					"item": [
+						{
+							"name": "CadastroEmpresa",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Diogo\",\r\n    \"email\": \"diogo.luo@gmail.com\",\r\n    \"cnpj\": \"34727037000138\",\r\n    \"senha\": \"diogo123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/Usuarios/cadastro/usuario-empresa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Usuarios",
+										"cadastro",
+										"usuario-empresa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AdminBuscarEmpresaByEmpresaId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Empresas/buscar/empresa/4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Empresas",
+										"buscar",
+										"empresa",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PerfilEmpresaGetEmpresaByUsuarioId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Empresas/buscar/usuario/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Empresas",
+										"buscar",
+										"usuario",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Administrador",
+					"item": [
+						{
+							"name": "GetAllAdmins",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGVtYWlsLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjAwMzc3OTAzLCJpc3MiOiJTZW5haS5WYWdhcy5CYWNrZW5kIiwiYXVkIjoiU2VuYWkuVmFnYXMuQmFja2VuZCJ9.msqjt7YfDOF9zb_mkAvxjQsZchysnPPBupqNk0TkP9Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Administrador/buscar-todos",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Administrador",
+										"buscar-todos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CadastrarUsuarioAdministrador",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nif\": \"1567235\",\r\n    \"email\": \"admin123@email.com\",\r\n    \"nome\": \"admin teste\",\r\n    \"senha\": \"admin123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/Usuarios/cadastro/usuario-administrador",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Usuarios",
+										"cadastro",
+										"usuario-administrador"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Recuperacao-AlteracaoDeDados",
+					"item": [
+						{
+							"name": "CriarSolicitacaoParaAlterarCredenciais",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"emailAtual\" : \"ruivolfb@gmail.com\",\r\n    \"novoEmail\" : \"feliperuivo10@hotmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/Usuarios/solicitar/alterar-credenciais",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Usuarios",
+										"solicitar",
+										"alterar-credenciais"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UsuarioAlterarCredenciais",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"novaSenha\" : \"luiz12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/Usuarios/alterar-credenciais/token/J3OJfA6mpzO1kN5yHoIjpIQBqWcaGmkCvwSip75ECFv91mS8GgZfZQsKJKuC",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Usuarios",
+										"alterar-credenciais",
+										"token",
+										"J3OJfA6mpzO1kN5yHoIjpIQBqWcaGmkCvwSip75ECFv91mS8GgZfZQsKJKuC"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "FuncoesAdmin",
+			"item": [
+				{
+					"name": "AdmExcluirUsuarioQualquer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGVtYWlsLmNvbSIsImp0aSI6IjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjAwMzg2MjAxLCJpc3MiOiJTZW5haS5WYWdhcy5CYWNrZW5kIiwiYXVkIjoiU2VuYWkuVmFnYXMuQmFja2VuZCJ9.tFaogdVd8hmAzcch6Qu_ktSPe3FvQ3-TXf_dgBSoYPc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/Administrador/desativar/usuario/diogo.luko@gmail.com/admin-atuante/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Administrador",
+								"desativar",
+								"usuario",
+								"diogo.luko@gmail.com",
+								"admin-atuante",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerTodosAdmins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGVtYWlsLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjAwMzc1OTkxLCJpc3MiOiJTZW5haS5WYWdhcy5CYWNrZW5kIiwiYXVkIjoiU2VuYWkuVmFnYXMuQmFja2VuZCJ9.RMD0-kthKG966j1HNUxreMSZRpoy4auAMDT6dccUzys",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Administrador/buscar-todos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Administrador",
+								"buscar-todos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Convites",
+			"item": [
+				{
+					"name": "CadastrarConviteEntrevista",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rua\" : \"Rua Barao de Limeira\",\r\n    \"bairro\" : \"Santa Cecilia\",\r\n    \"numero\" : \"777\",\r\n    \"infosComplementares\" : \"senai-info\",\r\n    \"municipio\": {\r\n     \"id\": 1,\r\n     \"descricao\": \"Adamantina\",\r\n     \"ufSigla\": {\r\n            \"id\": 7  ,\r\n            \"ufEstado\" : \"São Paulo\",\r\n            \"ufSigla\" : \"SP\"\r\n     }},\r\n     \"dataHoraEntrevista\" : \"2012-03-19T07:22Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/ConvitesEntrevistas/cadastrar/vaga/2/usuario-candidato/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ConvitesEntrevistas",
+								"cadastrar",
+								"vaga",
+								"2",
+								"usuario-candidato",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetConviteEntrevistaByCandidatoId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/ConvitesEntrevistas/convites/vaga/1/usuario/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ConvitesEntrevistas",
+								"convites",
+								"vaga",
+								"1",
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Inscricao",
+			"item": [
+				{
+					"name": "CandidatoInscreverOuCancelarInscricaoEmVaga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Inscricoes/vaga/4/usuario/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Inscricoes",
+								"vaga",
+								"4",
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "\nhttps://www.receitaws.com.br/v1/cnpj/73987382000162",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "34727037000138 (Válido)\r\n73987382000162 (Rejeitado)"
+				},
+				"url": {
+					"raw": "https://www.receitaws.com.br/v1/cnpj/73987382000162",
+					"protocol": "https",
+					"host": [
+						"www",
+						"receitaws",
+						"com",
+						"br"
+					],
+					"path": [
+						"v1",
+						"cnpj",
+						"73987382000162"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

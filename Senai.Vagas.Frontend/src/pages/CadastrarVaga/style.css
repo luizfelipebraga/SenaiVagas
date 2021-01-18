@@ -1,0 +1,24 @@
+.form-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#btn-cadastrar {
+  background-color: #df0002;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1280px) {
+  .form-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .form-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

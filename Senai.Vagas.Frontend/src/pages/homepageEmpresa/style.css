@@ -1,0 +1,12 @@
+@media(max-width: 1060px) {
+    .content-child {
+        margin: 0.9em;
+    }
+}
+
+.pagina {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+

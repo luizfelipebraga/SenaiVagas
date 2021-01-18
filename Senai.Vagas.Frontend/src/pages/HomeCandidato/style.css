@@ -1,0 +1,151 @@
+.content-child {
+    margin-bottom: 10%;
+}
+
+.mb-3.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-filtro {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin-top: 3%;
+}
+
+.filtro{
+    display: flex;
+    align-items: center;
+}
+
+.filtro h4 {
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.buscar{
+    display: flex;
+    align-items: center;
+    width: 55%;
+    margin: 1px, 0px, 1px, 0px;
+}
+
+#imgFiltro {
+    width: 2em;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.inputBuscar {
+    border-color: #bfbfbf;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 10px #a4a4a4;
+    -moz-box-shadow:    0px 1px 10px #a4a4a4;
+    box-shadow:         0px 1px 10px #a4a4a4;
+    margin-right: -2%;
+}
+
+#btn-filtrar-modal {
+    background-color:#D20003;
+    border: #D20003;
+    border-radius: solid 10px;
+}
+
+#btn-filtrar-modal:hover{
+    background-color: #c40104;
+    transition: background-color 0.3s;
+}
+
+#btn-filtrar{
+    background-color:#D20003;
+    border: #D20003;
+    border-radius: solid 10px;
+}
+
+#btn-filtrar:hover{
+    background-color: #c40104;
+    transition: background-color 0.3s;
+}
+
+.title{
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.title p {
+    font-size: 2.2em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.pagina {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 30vh;
+}
+
+@media (max-width: 1440px) {
+  .title p {
+      font-size: 1.7em;
+  }
+}
+
+@media (max-width: 1080px) {
+    .box-filtro {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        margin-top: 2.5%;
+    }
+}
+
+@media(max-width: 1060px) {
+    .content-child {
+        margin: 0.9em;
+    }
+}
+
+@media (max-width: 992px) {
+    .mb-3{
+        margin-top: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .title p {
+        font-size: 1.3em;
+    }
+    .title{
+        margin-top: 2em;
+        margin-bottom: -2em;
+    }
+    .box-filtro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .buscar {
+        width: 80%;
+    }
+    .filtro h4 {
+        display: none;
+    }
+  }
+
+  @media (max-width: 400px) {
+      .title {
+          margin-bottom: 1%;
+      }
+  }
+  

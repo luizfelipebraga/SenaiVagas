@@ -1,0 +1,132 @@
+.tabs {
+  margin: 2em;
+}
+
+.vermais-container .descricao {
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.vermais-container .descricao .text-muted {
+  font-size: 90%;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.filter {
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100%;
+  margin: 0 2%;
+  background-color: #373737;
+  padding: 1.5em 0;
+}
+
+.filter-container h3 {
+  color: #ffffff;
+}
+
+.filter {
+  color: #ffffff;
+  width: 30em;
+}
+/* BOTÕES DE TABELAS*/
+.btns-tables {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#btn-verDetalhes {
+  background-color: #ffffff;
+  color: #016799;
+  border-color: #016799;
+  transition-duration: 0.3s;
+}
+
+#btn-verDetalhes:hover {
+  background-color: #016799;
+  border-color: #016799;
+  color: #fbfbfb;
+}
+
+#btn-verInscritos {
+  background-color: #ffffff;
+  color: #016799;
+  border-color: #016799;
+  transition-duration: 0.3s;
+}
+
+#btn-verInscritos:hover {
+  background-color: #016799;
+  border-color: #016799;
+  color: #fbfbfb;
+}
+
+#btn-verMaisCand {
+  background-color: #ffffff;
+  color: #016799;
+  border-color: #016799;
+  transition-duration: 0.3s;
+}
+
+#btn-verMaisCand:hover {
+  background-color: #016799;
+  border-color: #016799;
+  color: #fbfbfb;
+}
+
+#btn-desativarAdm {
+    background-color: #DF0003;
+    color: #FBFBFB;
+    border-color:  #FBFBFB;
+    transition-duration: 0.3s;
+}
+
+ #btn-desativarAdm:hover {
+    background-color: #a00003;
+}
+/* FIM BOTÕES DE TABELAS*/
+
+@media (max-width: 1280px) {
+  .filter {
+    width: 20em;
+  }
+
+  .filter-container h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter {
+    width: 15em;
+  }
+
+  .filter-container {
+    margin: 0;
+  }
+
+  .filter-container h3 {
+    font-size: 1.3em;
+  }
+
+  .tabs {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter {
+    width: 12em;
+  }
+  .filter-container h3 {
+    font-size: 1.2em;
+  }
+}
